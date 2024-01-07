@@ -1,0 +1,25 @@
+
+:
+first CMD:
+zookeeper:
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+second CMD
+kafka:
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.4,org.apache.spark:spark-streaming-kafka-0-10_2.12:3.2.4,org.apache.kafka:kafka-clients:2.8.2 noaman.py
+
+
+park-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.4,org.apache.spark:spark-streaming-kafka-0-10_2.12:3.2.4,org.apache.kafka:kafka-clients:2.8.2 write-to-kafka.py
+
+
+Stopping zookeeper server
+C:\kafka>.\bin\windows\zookeeper-server-stop.bat .\config\zookeeper.properties
+.\bin\windows\kafka-server-stop.bat .\config\server.properties
+
+
+
+
+
+
